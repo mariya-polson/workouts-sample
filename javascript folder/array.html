@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Array Methods</h2>
+    <!-- <h2>toString()</h2>
+    <p>The toString() method returns an array as a comma separated string:</p> -->
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //   The toString() method returns an array as a comma separated string
+      document.getElementById("demo").innerHTML = fruits.toString();
+      //   The join() method joins array elements into a string.
+      document.getElementById("demo").innerHTML = fruits.join(" * ");
+      //   The pop() method removes the last element from an array.
+      document.getElementById("demo1").innerHTML = fruits;
+      fruits.pop();
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The pop() method returns the value that was "popped out"
+      document.getElementById("demo1").innerHTML = fruits.pop();
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The push() method appends a new element to an array and returns the new rray length
+      document.getElementById("demo1").innerHTML = fruits;
+      fruits.push("Kiwi");
+      document.getElementById("demo2").innerHTML = fruits;
+      document.getElementById("demo1").innerHTML = fruits.push("Kiwi");
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The shift() method removes the first element of an array (and "shifts" the other elements to the left)
+      document.getElementById("demo1").innerHTML = fruits;
+      fruits.shift();
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The shift() method returns the element that was shifted out.
+      document.getElementById("demo1").innerHTML = fruits.shift();
+      //   The unshift() method adds new elements to the beginning of an array
+      document.getElementById("demo1").innerHTML = fruits;
+      fruits.unshift("Lemon");
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The unshift() method returns the length of the new array
+      document.getElementById("demo1").innerHTML = fruits.unshift("Lemon");
+      //   Array elements are accessed using their index number
+      document.getElementById("demo1").innerHTML = fruits;
+      fruits[0] = "Kiwi";
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The length property provides an easy way to append new elements to an array without using the push() method
+      document.getElementById("demo1").innerHTML = fruits;
+      fruits[fruits.length] = "Kiwi";
+      document.getElementById("demo2").innerHTML = fruits;
+      //   Deleting elements leaves undefined holes in an arrays
+      document.getElementById("demo1").innerHTML =
+        "The first fruit is: " + fruits[0];
+      delete fruits[0];
+      document.getElementById("demo2").innerHTML =
+        "The first fruit is: " + fruits[0];
+      // The concat() method merges (concatenates) arrays
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+
+      document.getElementById("demo").innerHTML = myChildren;
+      //   The splice() method adds new elements to an array
+      document.getElementById("demo1").innerHTML = fruits;
+
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      document.getElementById("demo2").innerHTML = fruits;
+      //   The splice() methods can be used to remove array elements:
+      fruits.splice(0, 1);
+    </script>
+  </body>
+</html>
